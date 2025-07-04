@@ -12,7 +12,7 @@ def get_photographers():
         response = photographers_table.scan()
         return jsonify(response['Items'])
     except Exception as e:
-        return jsonify({'error':str(e)}),500
+        return jsonify({'error':str(e)}),5000
     
 if __name__ == '__main__':
     app.run(debug=True)
